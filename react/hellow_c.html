@@ -1,0 +1,33 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+<style>
+
+</style>
+
+
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+ 
+  // prepare content by using react
+
+  
+    class App extends React.Component{
+        render(){
+          return <h1>Hellow World</h1>
+        }
+    }
+
+
+  // get container ref
+  
+  var containerRef=document.getElementById('root')
+
+  //render content inside container'
+
+  ReactDOM.render(<App />,containerRef)
+
+</script>

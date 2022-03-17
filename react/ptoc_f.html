@@ -1,0 +1,38 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root" ></div>
+<style>
+    .box{
+        width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    }
+</style>
+
+<script type="text/babel">
+
+       const A=(obj)=>{
+          return <div>
+             <h1>A: {obj.n}</h1>
+            </div>
+        }
+
+   //props,refs,updater,context,isReactComponent, setState(f), forceUpdate(f)
+
+    
+        const App=()=>{
+            let name='sachin'
+            return <div>
+                 <h1>App</h1>
+                 <A n={name} />
+            </div>
+        }
+    
+
+    ReactDOM.render(<App />,document.getElementById('root'));
+</script>

@@ -1,0 +1,34 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+<div id="root"></div>
+
+<script type="text/babel">
+    
+ /*
+    function Player(obj){
+        return  <h1>Hellow, this is {obj.n}, I am from {obj['l']}.</h1>
+    }
+  */
+
+  class Player extends React.Component{
+      render(){
+        return  <h1>Hellow, this is {this.props.n}, I am from {this.props['l']}.</h1>
+      }
+  }
+ 
+
+
+    class App extends React.Component{
+        render(){
+            return <div>
+              <Player n="Sachin" l='Mumbai' />
+              <Player n="Dhoni" l='Ranchi'/>
+              <Player n="Kohli" l='Delhi'/>
+            </div>
+        }
+    }
+
+    ReactDOM.render(<App />,document.getElementById('root'))
+
+</script>

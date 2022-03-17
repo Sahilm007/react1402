@@ -1,0 +1,28 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+
+
+
+<script type="text/babel">
+
+
+  function Player() {
+      return <h1>Hellow This is Sachin.</h1>
+  }
+
+  function App(){
+       return <div>
+                <Player />
+                <Player />
+                <Player />
+                <Player />
+                <Player />
+       </div>
+  }
+
+ReactDOM.render(<App></App>, document.getElementById('root'))
+
+</script>

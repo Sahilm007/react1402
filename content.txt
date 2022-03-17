@@ -1,0 +1,141 @@
+
+
+HTML 2h
+
+ 1. inline vs block
+
+ 2. table, list
+
+ 3. input controls
+
+ 4. HTML5
+      semantic tags
+      input controls
+      attribtues
+      api
+
+      localStorage
+      navigate
+      drag and drop
+      sse, webworker
+
+
+CSS  3h
+
+  1. How many we can apply css ?
+
+  2. selectors
+
+  3. media queries
+
+  4. Boxmodel
+
+  5. positions(absolute,relative,fixed,sticky, static)
+
+  6. Bootstrap
+
+JavaScript -->20h
+
+1. How to get the reference
+
+2. How to apply styles dynamically
+
+3. variable and functions, clousure
+
+4. call , apply , bind
+
+5. How many ways we can create class in JS?
+
+6. Browser storages(localStorage, session storage, cookies)
+
+7. AJAX 
+
+8. Event Object
+
+9. Debouncing , throttling
+
+10. callback
+
+12. promises
+
+13. async and await
+
+14. Event Delifation, Event Bubbling
+
+15. setTimeout vs setInterval
+
+16. JSON, Array, String methods
+
+React
+
+1. Why we go for React ?
+
+2. How to prepare templates in React ?
+              component: functiional, class 
+
+3. How to handle the events in react ?
+          onClick, onKeyUp, onBlur , onFocus
+
+4. How to take the data from input controls ?
+
+        textbox, textarea, password, checkbox, radio..etc
+
+5. var, let, const , state, props, ref
+
+6. HOw to handle AJAX in react ?
+
+        XMLHttpRequest, fetch, axios 
+
+
+7.  npm, create-react-app, create-react-component
+
+8.  How to handle routing in react ?
+
+9.  Reusable component in react ?
+       a. table
+       b. list
+       c. select
+       d. form and validation
+
+10. list and keys
+
+11. communication b/w componets
+
+          a. parent to child
+          b. child to parent
+          c. siblings
+
+12. context api
+
+13. life cycle methods
+
+Redux 
+
+1. How to impliment redux into react application.
+
+              a. store
+              b. reducer
+              c. middlewares
+
+Hooks
+
+1. useState
+2. useEffect
+3. useRef
+4. useContext
+5. useReducer
+6. useCallback
+7. useMemo , React.memo
+
+
+Node: create API calls
+
+
+DB: MongoDB
+
+
+AWS/Heroku/Godaddy
+
+GIT
+
+React Native

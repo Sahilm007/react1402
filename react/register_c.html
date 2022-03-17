@@ -1,0 +1,172 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+<link rel="stylesheet" href="../bootstrap.css">
+<style>
+
+</style>
+
+
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+
+    class App extends React.Component{
+       constructor(){
+           super();
+           this.dataObj={}
+       }
+        fnChange=(eve)=>{
+            let type=eve.target.type
+            let value=''
+            switch(type){
+                case 'checkbox':
+                    value=eve.target.checked
+                    break;
+                default:
+                    value=eve.target.value
+                    break;
+            }
+            this.dataObj[eve.target.name]=value
+        }
+        fnClick=()=>{
+            console.log(this.dataObj)
+        }
+        render(){
+            return  <div className="container-fluid">
+                <h1 class="text-center mt-4 mb-4">Register</h1>
+<div class="row mb-3">
+     <div class="col-3 col-3 col-md-5 text-end">
+        <b>Uid:</b>
+     </div>
+     <div class="col-7 col-7 col-md-3">
+        <input name="uid" class="form-control" onChange={this.fnChange} />
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-3 col-md-5 text-end">
+       <b>Password:</b>
+    </div>
+    <div class="col-7 col-md-3">
+       <input name='pwd' class="form-control" type="password" onChange={this.fnChange} />
+   </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-3 col-md-5 text-end">
+        <b>Gender:</b>  </div>
+    <div class="col-7 col-md-3">
+        <input  class="me-2" value="M" onChange={this.fnChange} name="gen" type="radio" /><span class="me-2">Male</span>
+        <input  onChange={this.fnChange} value="F" class="ml-2 me-2" name="gen" type="radio" />FeMale
+   </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-3 col-md-5 text-end">
+        <b>Hobbies:</b>  </div>
+    <div class="col-7 col-md-3">
+        <input class="me-2" type="checkbox" name='isCriChk' onChange={this.fnChange} /> Cricket <input  onChange={this.fnChange} name="isHockeyChk" class="me-2" type="checkbox" /> Hockey 
+        <input class="me-2" type="checkbox" name='isFBChk' onChange={this.fnChange} /> FootBall
+   </div>
+</div>
+<div class="row mb-3">
+    <div class="col-3 col-md-5 text-end">
+        <b>Country:</b>  </div>
+    <div class="col-7 col-md-3">
+        <select class="form-control" name='country'  onChange={this.fnChange}>
+            <option>India</option>
+            <option>US</option>
+            <option>UK</option>
+        </select>
+        
+   </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-3 col-md-5 text-end">
+        <b>DOB:</b>  </div>
+    <div class="col-7 col-md-3">
+        <input type="date" class="form-control" name='dob'  onChange={this.fnChange} />
+        
+   </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-3 col-md-5 text-end">
+        <b>Rating:</b>  </div>
+    <div class="col-7 col-md-3">
+        <input type="range" name='range'  onChange={this.fnChange} />
+        
+   </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-3 col-md-5 text-end">
+        <b>Color:</b>  </div>
+    <div class="col-7 col-md-3">
+        <input type="color"  name='clr'  onChange={this.fnChange} />
+        
+   </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-3 col-md-5 text-end">
+        <b>Email:</b>  </div>
+    <div class="col-7 col-md-3">
+        <input type="email" class="form-control" name='email'  onChange={this.fnChange} />
+        
+   </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-3 col-md-5 text-end">
+        <b>Url:</b>  </div>
+    <div class="col-7 col-md-3">
+        <input type="url" class="form-control" name='url'  onChange={this.fnChange} />
+        
+   </div>
+</div>
+<div class="row mb-3">
+    <div class="col-3 col-md-5 text-end">
+        <b>Age:</b>  </div>
+    <div class="col-7 col-md-3">
+        <input type="number" class="form-control" name='age'  onChange={this.fnChange} />
+        
+   </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-3 col-md-5 text-end">
+        <b>Address:</b>  </div>
+    <div class="col-7 col-md-3">
+        <textarea class="form-control" name='address'  onChange={this.fnChange}></textarea>
+        
+   </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-3 col-md-5 text-end">
+        <b>Photo:</b>  </div>
+    <div class="col-7 col-md-3">
+        <input type="file"  name='photo'  onChange={this.fnChange} />
+        
+   </div>
+</div>
+
+<div class="row mb-3">
+    <div class="offset-sm-5 col-md-7">
+        <button onClick={this.fnClick} class="btn btn-primary">Register</button> </div>
+  
+</div>
+                </div>
+        }
+    }
+
+    
+
+  ReactDOM.render(<App />,document.getElementById('root'))
+
+</script>

@@ -1,0 +1,49 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+
+
+
+<script type="text/babel">
+
+
+
+  class App extends React.Component{
+      constructor(){
+          super();
+
+          //this.cnt=0
+
+          this.state={
+              cnt:0,
+              name:'Sachin'
+          }
+      }
+      fnClick=()=>{
+          // this.state.cnt=this.state.cnt+1
+          this.setState({
+              cnt:this.state.cnt+1
+          })
+         
+      }
+      fnNameChange=()=>{
+          this.setState({
+              name:'Dhoni'
+          })
+      }
+      render(){
+          return <div>
+             <h1>{this.state.cnt}</h1>
+             <button onClick={this.fnClick}>Inc Count</button>  
+             <h1>{this.state.name}</h1>
+             <button onClick={this.fnNameChange}>Name Change</button>  
+       </div>
+      }
+  }
+
+
+ReactDOM.render(<App></App>, document.getElementById('root'))
+
+</script>

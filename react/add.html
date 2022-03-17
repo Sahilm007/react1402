@@ -1,0 +1,45 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+<style>
+
+</style>
+
+
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+ 
+
+    function App(){
+
+       let n1Ref=React.useRef()
+       let n2Ref=React.useRef()
+       let h1Ref=React.useRef()
+
+       function add(){
+         let n1= n1Ref.current.value;
+         let n2= n2Ref.current.value;
+         let res=parseInt(n1)+Number(n2)
+         h1Ref.current.innerText=res;
+         if(res> 100){
+            h1Ref.current.style.color='red'
+         }else{
+            h1Ref.current.style.color='blue'
+         }
+       }
+       return <div>
+          
+           <p><b>No1:</b><input ref={n1Ref} /></p>
+           <p><b>No2:</b><input ref={n2Ref} /></p>
+           <p><button onClick={add}>Add</button></p>
+           <h1 ref={h1Ref}>0</h1>
+        </div>
+    }
+
+
+  ReactDOM.render(<App />,document.getElementById('root'))
+
+</script>
