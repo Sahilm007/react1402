@@ -1,0 +1,102 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root" ></div>
+
+
+<script type="text/babel">
+   const ctx=React.createContext()
+
+   class A extends React.Component{
+       render(){
+          return <div>
+             <h1>A </h1>
+             <C />
+         </div>
+       }
+   }
+
+   class C extends React.Component{
+       render(){
+          return <div>
+             <h1>C : {this.context}</h1>
+             <D />
+         </div>
+       }
+   }
+   C.contextType=ctx;
+
+   class D extends React.Component{
+       render(){
+          return <div>
+             <h1>D</h1>
+             <E />
+         </div>
+       }
+   }
+
+   class E extends React.Component{
+       render(){
+          return <div>
+             <h1>E: 
+                  <ctx.Consumer>
+                     {
+                         (data)=>{
+                            return data;
+                         }
+                     }
+                  </ctx.Consumer>
+                </h1>
+         </div>
+       }
+   }
+
+    class App extends React.Component{
+      
+        render(){
+            let name='Sachin'
+            return <div>
+                 <h1>App</h1>
+
+                 <ctx.Provider value={name}>
+                    <A/>
+                    <B />
+                 </ctx.Provider>
+                 
+            </div>
+        }
+    }
+
+    const B=()=>{
+        return <div>
+            <h1>B</h1>
+            <F />
+            </div>
+    }
+
+
+    const F=()=>{
+        return <div>
+            <h1>F: <ctx.Consumer>
+                     {
+                         (data)=>{
+                            return data;
+                         }
+                     }
+                  </ctx.Consumer>
+                
+                </h1>
+            <G />
+            </div>
+    }
+
+    const G=()=>{
+        const ctxData=React.useContext(ctx)
+        return <div>
+            <h1>G:{ctxData} </h1>
+            </div>
+    }
+
+    ReactDOM.render(<App />,document.getElementById('root'));
+</script>
