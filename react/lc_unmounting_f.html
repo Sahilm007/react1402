@@ -1,0 +1,37 @@
+<script src="react.development.js"></script>
+<script src="babel.min.js"></script>
+<script src="react-dom.development.js"></script>
+
+<div id="root"></div>
+
+
+
+<script type="text/babel">
+
+     const Hellow=()=>{
+         React.useEffect(()=>{
+            console.log('Hellow Mounted')
+         },[])
+         React.useEffect(()=>{
+              return ()=>{
+                console.log('Hellow Unmount')
+              }
+         },[])
+         return <h1>Helow Component</h1>
+     }
+  const App=()=>{
+      const [cnt,setCnt]=React.useState(0)
+    const fnClick=()=>{
+        setCnt(cnt+1)
+    }
+    return <div>
+                <h1>{cnt}</h1> 
+                <button onClick={fnClick}>click</button>
+                {cnt%2==0 && <Hellow />}
+       </div>
+  }
+ 
+
+ReactDOM.render(<App></App>, document.getElementById('root'))
+
+</script>
