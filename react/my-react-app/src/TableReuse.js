@@ -4,7 +4,7 @@ export const TableReuse = (props) => {
   return (
     <div>
         <h3>{props.heading}</h3>
-        <table border='1px'>
+      {props.data.length ?  <table border='1px'>
                 <thead>
                         <tr>
                             {
@@ -28,6 +28,9 @@ export const TableReuse = (props) => {
                     }
                 </tbody>
         </table>
+        :
+        <h3>No Data Found</h3>
+                }
     </div>
   )
 }
